@@ -95,8 +95,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="TESTDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TESTDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -115,6 +123,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="TESTDataSet.xsc">
+      <DependentUpon>TESTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TESTDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TESTDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TESTDataSet.xss">
+      <DependentUpon>TESTDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
