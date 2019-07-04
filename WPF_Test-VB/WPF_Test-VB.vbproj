@@ -132,10 +132,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\ハサミのフリーアイコン.png" />
-    <Resource Include="Images\バットのアイコン素材.png" />
-    <Resource Include="Images\夜空のフリーアイコン.png" />
-    <Resource Include="Images\温泉宿の暖簾アイコン.png" />
+    <Resource Include="Images\ハサミのフリーアイコン.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\バットのアイコン素材.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\夜空のフリーアイコン.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\温泉宿の暖簾アイコン.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
