@@ -6,19 +6,25 @@ Class MainWindow
 		Dim dt As New DataTable
 		Dim row As DataRow
 
+		dt.Columns.Add("id")
 		dt.Columns.Add("Text")
 		dt.Columns.Add("ImagePath")
 
 		row = dt.NewRow
+		row("id") = "あ"
 		row("Text") = "さいとう"
 		row("ImagePath") = getImagePath(ImageType.ハサミ)
 		dt.Rows.Add(row)
 
 
 		listBox.DataContext = dt
+		listBox.SelectedValuePath = "id"
 		datagrid.DataContext = dt
 	End Sub
 
+	Private Sub listBox_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles listBox.SelectionChanged
+		MsgBox(listBox.SelectedValue)
+	End Sub
 
 	Private Function getImagePath(ByVal type As ImageType) As String
 		Select Case type
