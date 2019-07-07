@@ -6,17 +6,21 @@
         xmlns:local="clr-namespace:WPF_Test_VB"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="200,0,200,0">
-		<ListBox x:Name="listBox">
+    <Grid>
+		<ListBox x:Name="listBox" ItemsSource="{Binding}" Margin="0,0,400,0">
 			<ListBox.ItemTemplate>
 				<DataTemplate>
 					<StackPanel Orientation="Horizontal">
-						<Image Source="{Binding ImagePath}"/>
-						<TextBlock Text="{Binding Text}" />
+						<Image Source="{Binding Path=ImagePath}"/>
+						<TextBlock Text="{Binding Path=Text}" />
 					</StackPanel>
 				</DataTemplate>
 			</ListBox.ItemTemplate>
 		</ListBox>
 
+
+		<DataGrid x:Name="datagrid" Margin="400,0,0,0" ItemsSource="{Binding}" AutoGenerateColumns="True"/>
+
 	</Grid>
+
 </Window>
